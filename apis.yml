@@ -1,8 +1,15 @@
 aid: litmus-automation
 name: Litmus Automation
-description: 'Litmus Automation is a company surfaced as a portfolio company of insight-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: manufacturing. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: 'Litmus Automation (Litmus) is an industrial data platform company that
+  helps manufacturers connect industrial systems, standardize operational data, and
+  deploy analytics, AI, and automation at scale across plant locations. Its products
+  are Litmus Edge (an industrial edge data platform for device connectivity, DataOps,
+  edge intelligence, and analytics), Litmus Edge Manager (centralized fleet management
+  for distributed edge deployments), and Litmus Unify (an MQTT-based Unified Namespace).
+  Litmus exposes a large public API surface — roughly 2,004 endpoints across the three
+  products (REST plus newer GraphQL areas), OAuth2 client-credentials authentication,
+  a standalone litmus-cli, a Python SDK, and an open-source Model Context Protocol
+  (MCP) server for agentic access. Backed by Insight Partners.'
 url: https://raw.githubusercontent.com/api-evangelist/litmus-automation/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,18 +17,126 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://litmus.io/favicon.ico
 tags:
 - Company
 - Manufacturing
-apis: []
+- Industrial IoT
+- Edge Computing
+- IIoT
+- Unified Namespace
+- MQTT
+- DataOps
+- Industrial Data Platform
+- Analytics
+apis:
+- name: Litmus Edge
+  description: 'Industrial edge data platform for device connectivity, industrial DataOps,
+    edge intelligence, and analytics. Around 871 endpoints in the 4.0.x line; most
+    endpoints are REST while newer areas (DeviceHub, Digital Twins, Analytics, Integrations)
+    use GraphQL. OAuth2 client-credentials bearer tokens.'
+  humanURL: https://api.litmus.io/le/agents.md
+  baseURL: https://api.litmus.io
+  properties:
+  - type: APIReference
+    url: https://api.litmus.io/le/agents.md
+  - type: GraphQL
+    url: https://api.litmus.io/le/devicehub/agents.md
+- name: Litmus Edge Manager
+  description: 'Centralized management for distributed edge environments — fleet operations,
+    companies, projects, licensing, RBAC, and admin console. Around 304 REST endpoints
+    in the 2.31.x line. X-AuthToken admin API token authentication.'
+  humanURL: https://api.litmus.io/lem/agents.md
+  baseURL: https://api.litmus.io
+  properties:
+  - type: APIReference
+    url: https://api.litmus.io/lem/agents.md
+- name: Litmus Unify
+  description: 'MQTT-based Unified Namespace (UNS) operations — namespace/class config,
+    MQTT accounts and ACL rules, clients, integrations (Kafka, connectors), and configuration.
+    Around 46 endpoints. OAuth2 bearer tokens.'
+  humanURL: https://api.litmus.io/luns/agents.md
+  baseURL: https://api.litmus.io
+  properties:
+  - type: APIReference
+    url: https://api.litmus.io/luns/agents.md
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/litmus-automation-trust-center.yml
+- type: Compliance
+  url: https://trust.litmus.io/
 - type: Website
   url: https://litmus.io/
+- type: DeveloperPortal
+  url: https://api.litmus.io
+- type: Documentation
+  url: https://docs.litmus.io
+- type: APIReference
+  url: https://api.litmus.io
+- type: GettingStarted
+  url: https://litmus.io/get-started
+- type: Support
+  url: https://support.litmus.io
+- type: Blog
+  url: https://litmus.io/blog
+- type: GitHubOrganization
+  url: https://github.com/litmusautomation
+- type: Pricing
+  url: https://litmus.io/pricing
+- type: SignUp
+  url: https://litmus.io/get-started
+- type: TermsOfService
+  url: https://litmus.io/terms-of-use/
+- type: PrivacyPolicy
+  url: https://litmus.io/privacy-policy/
+- type: StatusPage
+  url: https://status.litmus.io
+- type: LLMsTxt
+  url: llms/litmus-automation-llms.txt
+- type: MCPServer
+  url: mcp/litmus-automation-mcp.yml
+- type: Packages
+  url: packages/litmus-automation-packages.yml
+- type: SDKs
+  url: packages/litmus-automation-packages.yml
+- type: CLI
+  url: cli/litmus-automation-cli.yml
+- type: Authentication
+  url: authentication/litmus-automation-authentication.yml
+- type: ChangeLog
+  url: changelog/litmus-automation-changelog.yml
+- type: Conventions
+  url: conventions/litmus-automation-conventions.yml
+- type: Conformance
+  url: conformance/litmus-automation-conformance.yml
+- type: Lifecycle
+  url: lifecycle/litmus-automation-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/litmus-automation-lifecycle.yml
+- type: DomainSecurity
+  url: security/litmus-automation-domain-security.yml
