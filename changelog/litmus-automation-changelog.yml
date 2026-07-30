@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.litmus.io/reference/changelog-le.md
+docs:
+- https://api.litmus.io/reference/changelog-le.md
+- https://api.litmus.io/reference/changelog-lem.md
+scheme: semver-per-product
+notes: 'Litmus versions each product independently and publishes API migration changelogs
+  in its API portal. Litmus Edge current line 4.0.x (from 3.16.x); Litmus Edge Manager
+  current line 2.31.x (from 2.26.x).'
+products:
+- product: Litmus Edge
+  current: 4.0.x
+  previous: 3.16.x
+- product: Litmus Edge Manager
+  current: 2.31.x
+  previous: 2.26.x
+- product: Litmus Unify
+  current: 2.0.0+
+entries:
+- product: Litmus Edge
+  version: 4.0.x
+  breaking: true
+  highlights:
+  - Analytics migrated from REST to GraphQL (POST /analytics/v3); REST still supported
+    but not recommended.
+  - Integrations migrated from REST to GraphQL; added CloudSync APIs for cloud storage
+    connections and scheduled sync jobs.
+  - Digital Twins — added full lifecycle management (CRUD) and state transitions,
+    parameter schemas and per-twin parameter value management.
+  - Templates API moved from /dm/template to /config/template + /config/session; old
+    /dm/template endpoints deprecated.
+  - DeviceHub and Digital Twins now GraphQL (POST /devicehub/v2, POST /digital-twins).
+- product: Litmus Edge Manager
+  version: 2.31.x
+  breaking: false
+  highlights:
+  - Added device-level user management, Digital Twin v2 attribute parameters, service-level
+    notifications, git tracking, asset management roles, AI assistant settings, admin-console
+    instance alerts, and improved admin-level log querying.
+  deprecated:
+  - All /licenses/ endpoints (moving to /licenses2).
+  - Digital Twins /dt2/{static-attribute,dynamic-attribute} POST and DELETE.
+  - All /firmware/job endpoints.
+  removed:
+  - Device polling /device/poll/exec endpoints.

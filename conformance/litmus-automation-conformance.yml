@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.litmus.io/le/agents.md
+notes: 'Standards asserted from the published API documentation and the Litmus trust
+  center. No downloadable OpenAPI spec exists to derive from mechanically.'
+standards:
+- id: oauth2
+  conforms: true
+  evidence: Litmus Edge / Unify use OAuth2 client-credentials (and password) grants
+    at {{edgeUrl}}/auth/v3/oauth/token returning bearer access_tokens.
+- id: mqtt
+  conforms: true
+  evidence: Litmus Unify is an MQTT-based Unified Namespace (broker, accounts, ACLs,
+    clients).
+- id: graphql
+  conforms: true
+  evidence: Litmus Edge 4.0.x DeviceHub, Digital Twins, Analytics, and Integrations
+    areas are GraphQL.
+- id: iso-27001
+  conforms: true
+  evidence: ISO/IEC 27001 certification listed on the Litmus trust center (https://trust.litmus.io/).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No standardized application/problem+json error envelope documented.
+- id: openapi
+  conforms: false
+  evidence: No published OpenAPI/Swagger document; the API portal serves a proprietary
+    agents.md / llms.txt navigation tree and a Postman-style collection JSON.

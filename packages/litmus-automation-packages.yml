@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.litmus.io/sdk-agents.md
+notes: 'Litmus distributes its first-party client tooling through its own GitHub releases
+  rather than public language registries. The PyPI names "litmus" and "litmus-sdk"
+  are unrelated third-party packages and are NOT Litmus Automation. The official Python
+  package is "litmussdk" (shipped via GitHub releases, not PyPI at time of probe).
+  Go and Rust SDKs are announced as in the works but not yet public.'
+packages:
+- language: go
+  registry: github-releases
+  name: litmus-cli
+  url: https://github.com/litmusautomation/litmus-sdk-releases/releases
+  install: curl -fsSL https://raw.githubusercontent.com/litmusautomation/litmus-sdk-releases/main/install.sh | sh
+  description: Standalone statically-linked CLI built from the Litmus Go SDK; exposes
+    the full ~570-function SDK surface as shell commands with JSON output. Prebuilt
+    for macOS arm64, Linux amd64/arm64, Windows amd64. Latest cli-v0.7.0.
+  official: true
+- language: python
+  registry: github-releases
+  name: litmussdk
+  url: https://github.com/litmusautomation/litmus-sdk-releases/releases
+  install: pip install litmussdk (from Litmus release artifacts)
+  description: Official Python SDK for Litmus Edge, Litmus Edge Manager, and Litmus
+    Unify.
+  official: true
+- language: go
+  registry: github-releases
+  name: Litmus Go SDK
+  url: https://github.com/litmusautomation/litmus-sdk-releases
+  description: Go SDK — public source release announced as in the works.
+  official: true
+  status: announced
+- language: rust
+  registry: github-releases
+  name: Litmus Rust SDK
+  url: https://github.com/litmusautomation/litmus-sdk-releases
+  description: Rust SDK — announced as in the works, not yet public.
+  official: true
+  status: announced

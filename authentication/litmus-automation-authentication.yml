@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.litmus.io/le/agents.md
+docs: https://api.litmus.io/reference/variables.md
+notes: 'No downloadable OpenAPI spec is published (the API portal serves a proprietary
+  agents.md / llms.txt navigation tree), so this profile is captured from the published
+  API documentation rather than derived from securitySchemes.'
+summary:
+  types:
+  - oauth2
+  - apiKey
+  oauth2_flows:
+  - clientCredentials
+  - password
+  api_key_in:
+  - header
+schemes:
+- name: LitmusEdgeOAuth2
+  type: oauth2
+  applies_to:
+  - Litmus Edge
+  - Litmus Unify
+  flows:
+  - flow: clientCredentials
+    tokenUrl: '{{edgeUrl}}/auth/v3/oauth/token'
+    grant: client_credentials
+    request: 'POST {{edgeUrl}}/auth/v3/oauth/token, Content-Type: application/x-www-form-urlencoded,
+      body grant_type=client_credentials&client_id=<id>&client_secret=<secret>'
+    response: '{"access_token": "...", "expires_in": 3600}'
+  - flow: password
+    grant: password
+    note: Password grant also documented for Litmus Edge / Litmus Unify.
+  usage: 'Send the access_token as Authorization: Bearer <token> on every call. Tokens
+    expire in 3600s; refresh before expiry. Do NOT call the Keycloak-style path.'
+- name: LitmusEdgeManagerAdminToken
+  type: apiKey
+  in: header
+  name_header: X-AuthToken
+  applies_to:
+  - Litmus Edge Manager
+  note: LEM uses an admin API token supplied in the X-AuthToken header. A /auth/validate
+    endpoint validates tokens.

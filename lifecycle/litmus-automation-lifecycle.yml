@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.litmus.io/reference/changelog-lem.md
+notes: 'Captured from the Litmus API portal changelogs and status page. No formal published
+  deprecation-policy or SLA document was located; deprecation is communicated through
+  per-product API changelogs that explicitly list added/deprecated/removed endpoints.'
+versioning:
+  scheme: semver-per-product
+  products:
+    litmus_edge: 4.0.x
+    litmus_edge_manager: 2.31.x
+    litmus_unify: 2.0.0+
+  docs: https://api.litmus.io/reference/changelog-le.md
+deprecation:
+  policy: Deprecations and removals are announced per release in the product API changelogs,
+    which enumerate deprecated and removed endpoints and their replacements.
+  docs:
+  - https://api.litmus.io/reference/changelog-le.md
+  - https://api.litmus.io/reference/changelog-lem.md
+  examples:
+  - LEM 2.31.x deprecated all /licenses/ endpoints in favor of /licenses2.
+  - LEM 2.31.x deprecated Digital Twins /dt2 static/dynamic-attribute POST and DELETE.
+  - LEM 2.31.x deprecated all /firmware/job endpoints and removed /device/poll/exec.
+  - LE 4.0.x deprecated /dm/template endpoints in favor of /config/template.
+status_page: https://status.litmus.io

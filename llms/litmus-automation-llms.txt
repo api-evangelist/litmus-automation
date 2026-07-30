@@ -1,0 +1,79 @@
+# Litmus API
+
+> AI-friendly documentation for Litmus Edge, Litmus Edge Manager, and Litmus Unify. Static markdown - safe to fetch any single file in isolation. Total 2,004 endpoints across the three products.
+
+## Entry points
+
+- [Root router](https://api.litmus.io/agents.md): start here for any task
+- [MCP Server](https://api.litmus.io/mcp-agents.md): tool-call layer (no code)
+- [litmus-cli](https://api.litmus.io/cli.md): standalone CLI, the preferred method for agentic tasks
+- [CLI and SDKs guide](https://api.litmus.io/sdk-agents.md): litmus-cli plus the Python SDK; Go and Rust SDKs in the works
+
+## Products
+
+- [Litmus Edge router](https://api.litmus.io/le/agents.md): industrial edge data platform, 871 endpoints in 4.0.x
+- [Litmus Edge Manager router](https://api.litmus.io/lem/agents.md): centralized edge management, 304 endpoints in 2.31.x
+- [Litmus Unify router](https://api.litmus.io/luns/agents.md): MQTT-based Unified Namespace, 46 endpoints
+
+## Workflows (multi-step UI actions)
+
+- [Workflow index](https://api.litmus.io/workflows/agents.md)
+- [Create device with tags](https://api.litmus.io/workflows/create-device-with-tags.md)
+- [Browse for tags in bulk](https://api.litmus.io/workflows/browse-bulk-tags.md)
+- [Configure OPC UA server](https://api.litmus.io/workflows/configure-opcua-server.md)
+- [Create integration instance](https://api.litmus.io/workflows/create-integration-instance.md)
+- [Build an analytics pipeline (processors)](https://api.litmus.io/workflows/build-analytics-pipeline.md)
+- [Deploy app to edge (LE)](https://api.litmus.io/workflows/deploy-app.md)
+- [Deploy app to edge (LEM async)](https://api.litmus.io/workflows/deploy-app-lem.md)
+- [Backup / restore edge (LEM)](https://api.litmus.io/workflows/backup-restore-edge.md)
+- [Zero-touch provision edge](https://api.litmus.io/workflows/provision-zero-touch.md)
+- [Create project alert](https://api.litmus.io/workflows/create-project-alert.md)
+- [Provision MQTT account (LUNS)](https://api.litmus.io/workflows/provision-mqtt-account.md)
+- [Upload template](https://api.litmus.io/workflows/apply-upload-template.md)
+- [Restore system backup (LE)](https://api.litmus.io/workflows/restore-backup.md)
+- [Upload CA certificate](https://api.litmus.io/workflows/upload-ca-cert.md)
+- [Upload analytics model (LE)](https://api.litmus.io/workflows/upload-analytics-model.md)
+- [Upload AI/ML model (LEM)](https://api.litmus.io/workflows/upload-ml-model-lem.md)
+
+## LE components
+
+- [Dashboard](https://api.litmus.io/le/dashboard.md)
+- [DeviceHub router](https://api.litmus.io/le/devicehub/agents.md): devices, drivers, tags, browse
+- [Digital Twins](https://api.litmus.io/le/digital-twins.md)
+- [DataHub](https://api.litmus.io/le/datahub.md): local time-series
+- [Flows Manager](https://api.litmus.io/le/flows.md): Node-RED
+- [Analytics](https://api.litmus.io/le/analytics.md): AI/ML inference
+- [Applications](https://api.litmus.io/le/applications.md): Docker apps + marketplace
+- [Integration router](https://api.litmus.io/le/integration/agents.md): cloud + object sinks
+- [OPC UA](https://api.litmus.io/le/opcua.md): expose tags upstream
+- [System router](https://api.litmus.io/le/system/agents.md): network, backup, certs, RBAC
+
+## LEM components
+
+- [Companies](https://api.litmus.io/lem/companies.md)
+- [Edge Lifecycle router](https://api.litmus.io/lem/edge-lifecycle/agents.md): per-edge fleet ops
+- [Digital Twins](https://api.litmus.io/lem/digital-twins.md): DT2 asset models
+- [Admin Console router](https://api.litmus.io/lem/admin-console/agents.md): LEM instance admin
+
+## LUNS components
+
+- [Dashboard](https://api.litmus.io/luns/dashboard.md): version, server stats, clients, topics
+- [UNS namespace / class config](https://api.litmus.io/luns/uns.md)
+- [MQTT (broker info, accounts + ACL rules, clients, interfaces, activation token)](https://api.litmus.io/luns/mqtt.md)
+- [Integrations (Kafka, connectors)](https://api.litmus.io/luns/integrations.md)
+- [Configuration (backup, update files, upgrade)](https://api.litmus.io/luns/configuration.md)
+- [Security (MQTT accounts, ACLs)](https://api.litmus.io/luns/security.md): Litmus UNS (<v2.0.0) only
+- [Tools (server config)](https://api.litmus.io/luns/tools.md): Litmus UNS (<v2.0.0) only
+
+## Reference
+
+- [Environment variables](https://api.litmus.io/reference/variables.md): every `{{variable}}`, split into set-once configuration and captured-at-runtime IDs
+- [DeviceHub / DataHub message format](https://api.litmus.io/reference/devicehub-message-format.md): the flat JSON shape a tag value flows as (value, tagName, deviceID, datatype, ...), with a JSONata cheatsheet
+- [Analytics processors (LE 4.0.x)](https://api.litmus.io/reference/analytics-processors.md): 56-processor catalog with description, config params, and required wire definitions per processor
+- [LE changelog 3.16.x to 4.0.x](https://api.litmus.io/reference/changelog-le.md): GraphQL migrations (Analytics, Integrations), Digital Twin parameters, CloudSync, templates API
+- [LEM changelog 2.26.x to 2.31.x](https://api.litmus.io/reference/changelog-lem.md): added/deprecated/removed endpoints with full operation list
+
+## Optional
+
+- [Full collection JSON](https://api.litmus.io/collections.json): 30 MB / ~520,000 tokens. Do NOT fetch in full; only use as a fallback for endpoints not in this tree (e.g. deprecated 3.16.x / 2.26.x versions).
+- [Sitemap](https://api.litmus.io/sitemap.xml)

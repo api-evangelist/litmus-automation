@@ -1,0 +1,81 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://github.com/litmusautomation/litmus-mcp-server
+docs: https://litmus.io/litmus-mcp-server
+license: Apache-2.0
+version: v1.1.1
+server:
+  name: Litmus MCP Server
+  description: Official open-source Model Context Protocol server for Litmus Edge —
+    turns natural-language prompts into real edge operations across devices, telemetry,
+    containers, and data models. Also exposes the full ~570-function Litmus SDK via
+    two generic fallback tools.
+  repo: https://github.com/litmusautomation/litmus-mcp-server
+  container_image: ghcr.io/litmusautomation/litmus-mcp-server:latest
+  transports:
+  - transport: http
+    endpoint: /mcp
+    note: Streamable HTTP (recommended, MCP spec-compliant)
+  - transport: sse
+    endpoint: /sse
+    note: HTTP+SSE (legacy)
+  - transport: stdio
+    note: Local STDIO for Claude Desktop / desktop clients
+  config_env:
+  - EDGE_URL
+  - EDGE_API_CLIENT_ID
+  - EDGE_API_CLIENT_SECRET
+  optional_env:
+  - NATS_SOURCE
+  - NATS_PORT
+  - NATS_PASSWORD
+  - INFLUX_HOST
+  - INFLUX_PORT
+  - INFLUX_DB_NAME
+  - INFLUX_USERNAME
+  - INFLUX_PASSWORD
+  clients:
+  - Claude Desktop
+  - Claude Code CLI
+  - Cursor
+  - VS Code
+  - Windsurf
+  - GitHub Copilot
+install:
+  docker: docker run -d --name litmus-mcp-server -p 8000:8000 ghcr.io/litmusautomation/litmus-mcp-server:latest
+  source: git clone https://github.com/litmusautomation/litmus-mcp-server.git && uv sync
+tool_categories:
+- name: DeviceHub — Devices
+  count: 5
+- name: DeviceHub — Tags
+  count: 8
+- name: Device Identity
+  count: 2
+- name: Cloud/LEM Activation
+  count: 1
+- name: Docker Management
+  count: 2
+- name: NATS Topics
+  count: 2
+- name: InfluxDB / Time Series
+  count: 6
+- name: System — Events
+  count: 2
+- name: System — Network
+  count: 6
+- name: Digital Twins
+  count: 8
+- name: Litmus Edge Manager (LEM)
+  count: 12
+- name: LEM Bridge
+  count: 2
+- name: SDK Fallback (CLI)
+  count: 3
+tool_count: 59
+fallback_tools:
+- name: litmus_sdk_discover
+  description: Browse the ~570-function Litmus SDK catalog with optional filtering.
+- name: litmus_sdk_call
+  description: Invoke any cataloged SDK function; requires explicit user approval before
+    execution.

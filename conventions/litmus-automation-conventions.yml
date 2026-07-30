@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.litmus.io/agents.md
+notes: 'Cross-cutting request/response semantics captured from the Litmus API portal.
+  No idempotency-key contract and no standardized pagination scheme were documented
+  at time of capture, so those are recorded as not-observed rather than asserted (no
+  Idempotency pointer is emitted).'
+authentication:
+  style: OAuth2 client-credentials bearer tokens (Litmus Edge / Unify); X-AuthToken
+    admin token (Litmus Edge Manager).
+  ref: authentication/litmus-automation-authentication.yml
+api_styles:
+  description: Mixed REST + GraphQL. Most endpoints are REST; newer Litmus Edge 4.0.x
+    areas (DeviceHub POST /devicehub/v2, Digital Twins POST /digital-twins, Analytics
+    POST /analytics/v3, Integrations) use GraphQL. Litmus Unify is MQTT-based.
+message_format:
+  description: DeviceHub / DataHub tag values flow as a flat JSON shape (value, tagName,
+    deviceID, datatype, ...). JSONata is used for transformation.
+  ref: https://api.litmus.io/reference/devicehub-message-format.md
+templating:
+  description: 'API docs use {{variable}} templating for connection details (edgeUrl,
+    oauth_client_id, oauth_client_secret, LEM_URL, LEM_adminURL) plus captured-at-runtime
+    IDs.'
+  ref: https://api.litmus.io/reference/variables.md
+versioning:
+  ref: lifecycle/litmus-automation-lifecycle.yml
+error_semantics:
+  observed: Not documented as a standardized problem+json envelope; errors are product/endpoint
+    specific.
+idempotency:
+  observed: Not documented.
+pagination:
+  observed: Not documented as a single cross-cutting scheme.
+rate_limiting:
+  observed: Not documented.
+event_surface:
+  description: Real-time messaging over NATS topics (Litmus Edge) and MQTT (Litmus
+    Unify Unified Namespace); time-series history via InfluxDB (DataHub).

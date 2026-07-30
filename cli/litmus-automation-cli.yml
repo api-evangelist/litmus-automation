@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.litmus.io/cli.md
+name: litmus-cli
+description: Standalone command-line client for Litmus Edge, Litmus Edge Manager, and
+  Litmus Unify. A single statically-linked binary (built from the Litmus Go SDK) that
+  exposes the full ~570-function SDK surface as shell commands with JSON output. Litmus
+  markets it as the preferred interface for AI agents and agentic tasks — no code to
+  write, install, or run.
+latest: cli-v0.7.0
+platforms:
+- macOS arm64
+- Linux amd64
+- Linux arm64
+- Windows amd64
+install:
+- method: script
+  command: curl -fsSL https://raw.githubusercontent.com/litmusautomation/litmus-sdk-releases/main/install.sh | sh
+  note: macOS/Linux — detects platform, verifies SHA256, installs to ~/.local/bin
+- method: download
+  command: download litmus-cli-windows-amd64.exe from the latest cli-v* release
+  note: Windows
+releases: https://github.com/litmusautomation/litmus-sdk-releases/releases
+output: JSON on stdout, errors on stderr (pipes cleanly into jq and agent tool calls)
+commands:
+- command: litmus-cli list [prefix]
+  purpose: Browse the SDK function catalog (~570 functions) with parameter names.
+- command: litmus-cli run <dotted.path>
+  purpose: Call any SDK function by dotted path with JSON arguments.
+- command: litmus-cli le <shortcut>
+  purpose: Curated Litmus Edge shortcuts (devices, tags, flows, containers, ...).
+- command: litmus-cli le data <cmd>
+  purpose: Data plane — live tag values (NATS) and time-series history (InfluxDB).
+- command: litmus-cli lem <shortcut>
+  purpose: Curated Edge Manager shortcuts (companies, projects, devices).
+- command: litmus-cli login [le|lem|unify]
+  purpose: Browser-based sign-in; no argument shows all three product cards.
+- command: litmus-cli config set/show
+  purpose: Manage saved connection profiles (~/.litmus/<profile>.json).
+- command: litmus-cli completion <shell>
+  purpose: Shell completion (bash, zsh, fish, powershell).
+- command: litmus-cli version / update
+  purpose: Print CLI version / self-update in place to the latest cli-v* release.
+key_flows:
+- Discover then run — litmus-cli list <package> to find the exact function path and
+  args, then litmus-cli run <dotted.path> --args '{...}' to call it.
+- Multiple instances via named profiles (--profile staging).
+- Built-in docs on every command and SDK package via --help.
