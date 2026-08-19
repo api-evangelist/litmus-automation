@@ -7,10 +7,9 @@ license: Apache-2.0
 version: v1.1.1
 server:
   name: Litmus MCP Server
-  description: Official open-source Model Context Protocol server for Litmus Edge —
-    turns natural-language prompts into real edge operations across devices, telemetry,
-    containers, and data models. Also exposes the full ~570-function Litmus SDK via
-    two generic fallback tools.
+  description: Official open-source Model Context Protocol server for Litmus Edge — turns natural-language
+    prompts into real edge operations across devices, telemetry, containers, and data models. Also exposes
+    the full ~570-function Litmus SDK via two generic fallback tools.
   repo: https://github.com/litmusautomation/litmus-mcp-server
   container_image: ghcr.io/litmusautomation/litmus-mcp-server:latest
   transports:
@@ -77,5 +76,10 @@ fallback_tools:
 - name: litmus_sdk_discover
   description: Browse the ~570-function Litmus SDK catalog with optional filtering.
 - name: litmus_sdk_call
-  description: Invoke any cataloged SDK function; requires explicit user approval before
-    execution.
+  description: Invoke any cataloged SDK function; requires explicit user approval before execution.
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 59
+  checked: '2026-08-12'
+  source: catalog MCP census
