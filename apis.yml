@@ -44,7 +44,20 @@ specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 image: https://litmus.io/favicon.ico
+x-docs-platform: postman
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-03
 tags:
+- Company
+- Manufacturing
+- Industrial IoT
+- Edge Computing
+- Unified Namespace
+- MQTT
+- DataOps
+- Industrial Data Platform
+- Analytics
+tags_raw:
 - Company
 - Manufacturing
 - Industrial IoT
