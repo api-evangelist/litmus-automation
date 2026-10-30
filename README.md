@@ -64,6 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Litmus Automation is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. Sector: manufacturing. This profile is a lead awaiting the enrichment pipeline.
+Litmus Automation (Litmus) is an industrial data platform company that helps manufacturers connect industrial systems, standardize operational data, and deploy analytics, AI, and automation at scale across plant locations. Its products are Litmus Edge (an industrial edge data platform for device connectivity, DataOps, edge intelligence, and analytics), Litmus Edge Manager (centralized fleet management for distributed edge deployments), and Litmus Unify (an MQTT-based Unified Namespace). Litmus exposes a large public API surface — roughly 2,004 endpoints across the three products (REST plus newer GraphQL areas), OAuth2 client-credentials authentication, a standalone litmus-cli, a Python SDK, and an open-source Model Context Protocol (MCP) server for agentic access. Backed by Insight Partners.
 
-Backed by: insight-partners — https://litmus.io/
+**Areas:** Company · Manufacturing · Industrial IoT · Edge Computing · Unified Namespace · MQTT · DataOps · Industrial Data Platform · Analytics
+
+## Litmus Automation on APIs.io
+
+Everything profiled for Litmus Automation is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/litmus-automation/](https://apis.io/providers/litmus-automation/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [Litmus Edge](https://apis.io/apis/litmus-automation/litmus-edge/) — Industrial edge data platform for device connectivity, industrial DataOps, edge intelligence, and analytics. Around 871 endpoints in the 4.0.x line; most…
+- [Litmus Edge Manager](https://apis.io/apis/litmus-automation/litmus-edge-manager/) — Centralized management for distributed edge environments — fleet operations, companies, projects, licensing, RBAC, and admin console. Around 304 REST…
+- [Litmus Unify](https://apis.io/apis/litmus-automation/litmus-unify/) — MQTT-based Unified Namespace (UNS) operations — namespace/class config, MQTT accounts and ACL rules, clients, integrations (Kafka, connectors), and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Litmus MCP Server](https://apis.io/servers/litmus-automation/litmus-mcp-server/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Litmus Automation Authentication](https://apis.io/security/litmus-automation/litmus-automation-authentication/)
+- [Litmus Automation Domain Security](https://apis.io/security/litmus-automation/litmus-automation-domain-security/)
+- [Litmus Automation Trust Center](https://apis.io/security/litmus-automation/litmus-automation-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://litmus.io/)
+- [Documentation](https://docs.litmus.io)
+- [Getting started](https://litmus.io/get-started)
+- [API reference](https://api.litmus.io)
+- [Pricing](https://litmus.io/pricing)
+- [Sign up](https://litmus.io/get-started)
+- [Support](https://support.litmus.io)
+- [Blog](https://litmus.io/blog)
+- [Compliance](https://trust.litmus.io/)
+- [Terms of service](https://litmus.io/terms-of-use/)
+- [Privacy policy](https://litmus.io/privacy-policy/)
+- [GitHub](https://github.com/litmusautomation)
+- [Status](https://status.litmus.io)
+
+## API Evangelist rating
+
+**Kin Score 42.9** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 76.7 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 42.1 |
+| Developer ergonomics | 66.7 |
+| Access clarity | 60.5 |
+
+**Agent readiness 6.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/litmus-automation/](https://apis.io/providers/litmus-automation/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Litmus Automation: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/litmus-automation/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
